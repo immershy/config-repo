@@ -30,7 +30,6 @@ spring:
       
 foo: from-default
 
----
 spring:
   profiles: cloud
   cloud:
@@ -62,7 +61,6 @@ ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
 
----
 spring:
   profiles: docker
   cloud:
