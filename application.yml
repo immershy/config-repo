@@ -10,6 +10,16 @@ zuul:
     corps:
       path: /corps/**
       url: http://localhost:8002/corps
+redis:
+  maxActive:200
+  maxIdle:100
+  minIdle:10
+  maxTotal:200
+  maxWait:200
+  testOnBorrow:false
+  testOnReturn:true
+  ip:redis_db
+  port:6379
 spring:
     datasource:
         name: test
