@@ -5,6 +5,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:1111/eureka/
+zuul:
+  routes:
+    corps:
+      path: /corps/**
+      url: http://localhost:8002/corps
 spring:
     datasource:
         name: test
