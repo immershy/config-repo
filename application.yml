@@ -29,7 +29,7 @@ spring:
         maxOpenPreparedStatements: 20
       
 foo: from-default
-
+---
 spring:
   profiles: cloud
   cloud:
@@ -60,7 +60,7 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
-
+---
 spring:
   profiles: docker
   cloud:
