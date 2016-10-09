@@ -44,7 +44,7 @@ spring:
         maxOpenPreparedStatements: 20
    
 --
-spring：
+spring:
   application: aa   
 ---
 spring:
