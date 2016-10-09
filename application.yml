@@ -42,7 +42,10 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-      
+   
+--
+spring：
+  application: aa   
 ---
 spring:
   profiles: dev
