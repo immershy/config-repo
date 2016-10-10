@@ -1,6 +1,5 @@
 info:
-  description: Spring Cloud Samples
-  url: https://github.com/spring-cloud-samples
+  description: Spring Cloud Config
 eureka:
   client:
     serviceUrl:
@@ -10,6 +9,7 @@ zuul:
     corps:
       path: /corps/**
       url: http://localhost:8002/corps
+#redis
 redis:
   maxActive: 200
   maxIdle: 100
@@ -20,6 +20,7 @@ redis:
   testOnReturn: true
   ip: redis_db
   port: 6379
+#db
 spring:
     datasource:
         name: test
@@ -46,42 +47,3 @@ spring:
 ---
 spring:
   profiles: dev
-  cloud:
-    config:
-      uri: https://github.com/immershy/config-repo
-oauth2:
-  client:
-    tokenUri: http://localhost:7001/login/oauth/token
-    clientId: test
-    clientSecret: test
-application:
-  domain: ${APPLICATION_DOMAIN:cfapps.io}
-endpoints:
-  restart: enabled
-eureka:
-  password: password
-  instance:
-    hostname: 127.0.0.1
-    nonSecurePort: 80
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:1112/eureka/
-ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
----
-spring:
-  profiles: online
-  cloud:
-    config:
-      uri: http://localhost:7000
-endpoints:
-  restart: enabled
-eureka:
-  instance:
-    nonSecurePort: 80
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:1113/eureka/
-
