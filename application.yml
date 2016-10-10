@@ -8,7 +8,7 @@ zuul:
   routes:
     corps:
       path: /corps/**
-      url: http://localhost:8002/corps
+      url: http://yq-mod-corp/corps
 #redis
 redis:
   maxActive: 200
