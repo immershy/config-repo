@@ -44,7 +44,16 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-      
+    redis:
+        host: redis_db
+        port: 6379
+        pool:
+            max-active: 100
+            max-wait: 500
+            max-idle: 100
+            min-idle: 5
+        testOnBorrow: false
+        testOnReturn: false
 ---
 spring:
   profiles: dev
